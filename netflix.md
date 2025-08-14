@@ -7,7 +7,13 @@
 5. Markup 시작( <header> 로고 / 버튼 2개 </header>, <section>슬라이드영역</section> )
 6. CSS 시작
 
-7. <form>
+7. <select>
+       <option value="ko">한국어</option>
+       <option value="en">English</option>
+       </select>
+   <button type="button">로그인</button>
+
+  <form>
        <input type="email" placeholder="이메일주소" required>
        <button type="submit">시작하기</button>
    </form>
