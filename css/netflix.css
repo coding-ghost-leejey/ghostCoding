@@ -14,6 +14,13 @@ body {
 }
 
 .page-header {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(46, 22, 28, 0) 100%
+  );
+}
+.page-header .inner {
   width: 100%;
   max-width: 1290px;
   margin: 0 auto;
@@ -22,13 +29,7 @@ body {
   height: 88px;
   align-items: center;
   padding: 0 1.25rem;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(46, 22, 28, 0) 100%
-  );
 }
-
 .page-header h1 {
   width: 148px;
 }
