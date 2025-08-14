@@ -10,7 +10,7 @@
 7. <select>
        <option value="ko">한국어</option>
        <option value="en">English</option>
-       </select>
+   </select>
    <button type="button">로그인</button>
 
   <form>
