@@ -22,7 +22,8 @@ a {
 }
 
 select,
-button {
+button,
+input {
   border: none;
   background-color: transparent;
   color: inherit;
@@ -44,4 +45,9 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
 }
