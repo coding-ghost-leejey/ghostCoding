@@ -21,6 +21,13 @@ a {
   overflow: hidden;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+}
+
 select,
 button,
 input {
@@ -50,11 +57,4 @@ h6 {
 ul,
 ol {
   list-style: none;
-}
-
-table {
-}
-
-td {
-  border: 1px solid #000;
 }
