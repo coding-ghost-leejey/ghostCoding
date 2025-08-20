@@ -4,6 +4,11 @@
   --primary: #d81e27;
   --title: 56px;
   --description: 20px;
+  --radius-s: 0.24rem;
+  --radius-m: 0.5rem;
+  --radius-l: 1rem;
+  --grd-type-a: linear-gradient(91deg, #261733, #151a3f);
+  --max-w: 1414px;
 }
 
 body {
@@ -11,6 +16,7 @@ body {
     auto;
   color: #fff;
   font-family: sans-serif;
+  padding-bottom: 300px;
 }
 
 .page-header {
@@ -100,4 +106,45 @@ body {
 .input-container button {
   background-color: var(--primary);
   font-size: 1.25rem;
+}
+
+.banner-discount {
+  border-radius: var(--radius-l);
+  background-image: var(--grd-type-a);
+  padding: 1.25rem;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+  transition: 0.4s;
+}
+
+.banner-discount:hover {
+  scale: 1.1;
+}
+
+.banner-discount h3 {
+  font-size: 1.25rem;
+}
+
+.banner-discount h3 em {
+  font-weight: 600;
+}
+
+.banner-discount a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-s);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  translate: 0 -50%;
+  transition: 0.4s;
+}
+
+.banner-discount a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
