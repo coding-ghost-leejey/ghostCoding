@@ -8,6 +8,7 @@
   --radius-m: 0.5rem;
   --radius-l: 1rem;
   --grd-type-a: linear-gradient(91deg, #261733, #151a3f);
+  --grd-type-a-hover: linear-gradient(91deg, #482566 0%, #161d52 99.51%);
   --max-w: 1414px;
 }
 
@@ -107,20 +108,44 @@ body {
   background-color: var(--primary);
   font-size: 1.25rem;
 }
+/* main */
+.page-main {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  outline: 1px solid red;
+}
 
 .banner-discount {
   border-radius: var(--radius-l);
   background-image: var(--grd-type-a);
   padding: 1.25rem;
-  width: 100%;
-  max-width: var(--max-w);
-  margin: 0 auto;
+
   position: relative;
-  transition: 0.4s;
+  transition: 0.7s;
+  overflow: hidden;
+}
+
+.banner-discount::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  background-image: var(--grd-type-a-hover);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+
+.banner-discount::after {
+  content: "aa";
 }
 
 .banner-discount:hover {
-  scale: 1.1;
+  scale: 1.05;
+}
+
+.banner-discount:hover::before {
+  opacity: 1;
 }
 
 .banner-discount h3 {
@@ -147,4 +172,27 @@ body {
 
 .banner-discount a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 지금뜨는 컨텐츠 */
+.page-main .contents {
+  margin: 2rem 0;
+}
+.now-container h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.reason-container ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reason-container li {
+  width: calc((100% - 36px) / 4);
+  height: 200px;
+  outline: 1px solid gold;
+  background: url("../images/icons/sns_facebook.png") no-repeat right 10px
+    bottom 15px/40px auto;
 }

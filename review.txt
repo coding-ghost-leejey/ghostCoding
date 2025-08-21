@@ -1,0 +1,16 @@
+html
+-> 웹문서 구조 -> 웹브라우저에서 보는 문서가 웹문서 -> HTML 언어
+
+주요 5대 웹브라우저 : 
+크롬(구글), 사파리(애플), 엣지(MS), 파이어폭스(Mozila), 
+오페라(Opera)
+
+디자인 -> css ( cascading style sheet)
+DOM -> 웹브라우저가 HTML 읽어서 DOM TREE 를 만든다.
+
+브라우저 접두사
+
+크롬, 엣지,...
+
+display:flex;
+ 
