@@ -55,13 +55,94 @@
         </article>
 
         <article class="contents now-container">
-            <h3>지금뜨는 컨텐츠</h3>
+            <header>
+
+                <h3>지금뜨는 컨텐츠</h3>
+                <div class="pager-container">
+                    <button type="button" class="start">처음</button>
+                    <button type="button" class="end">끝</button>
+                </div>
+            </header>
             <ol>
                 <li>
                     <a href="#">
                         <img src="./images/card_thumb_0.jpg" alt="">
                     </a>
-                    <span class="num">1</span>
+                    <span class="num" data-rank="1">
+                        1
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_1.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="2">
+                        2
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_2.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="3">
+                        3
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_0.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="4">
+                        4
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_1.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="5">
+                        5
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_2.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="6">
+                        6
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_0.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="7">
+                        7
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_1.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="8">
+                        8
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_2.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="9">
+                        9
+                    </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/card_thumb_0.jpg" alt="">
+                    </a>
+                    <span class="num" data-rank="10">
+                        10
+                    </span>
                 </li>
             </ol>
         </article>
@@ -96,6 +177,37 @@
         </article>
     </main>
 
+
+    <script>
+        const nowContainer = document.querySelector('.now-container');
+        const list = nowContainer.querySelector('ol')
+        const goStart = nowContainer.querySelector('.start')
+        const goEnd = nowContainer.querySelector('.end')
+
+        goStart.addEventListener('click', () => {
+            list.scrollTo({
+                left: 0,
+            })
+        })
+
+        goEnd.addEventListener('click', () => {
+            list.scrollTo({
+                left: list.scrollWidth - list.clientWidth
+            })
+        })
+
+        updateButtonStates();
+
+        list.addEventListener('scroll', updateButtonStates)
+
+        function updateButtonStates() {
+            const isAtStart = list.scrollLeft === 0;
+            const isAtEnd = list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1)
+
+            isAtStart ? goStart.classList.add('disabled') : goStart.classList.remove('disabled')
+            isAtEnd ? goEnd.classList.add('disabled') : goEnd.classList.remove('disabled')
+        }
+    </script>
 
 </body>
 

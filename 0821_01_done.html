@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        :root {
+            --primary: #414793;
+            --on--primary: #a0a3d1;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .search-container {
+            width: 400px;
+            padding: 1rem;
+        }
+
+        .search-container input,
+        .search-container button {
+            height: 42px;
+            border-radius: 5px;
+        }
+
+        .search-container input {
+            border: 1px solid #d8d8d8;
+            background: url('./images/icons/search.svg') no-repeat 10px center/24px auto;
+            padding: 0 10px 0 44px;
+        }
+
+        .search-container button {
+            background-color: var(--primary);
+            color: var(--on--primary)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-container">
+        <form>
+            <fieldset>
+                <legend>검색</legend>
+                <input type="search" placeholder="검색어를 입력하세요" required>
+                <button type="submit">
+                    검색
+                </button>
+            </fieldset>
+        </form>
+        <a href="./searchResult.html">Advanced Search</a>
+    </div>
+</body>
+
+</html>

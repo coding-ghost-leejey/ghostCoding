@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .terms-container {
+            height: 150px;
+            border: 1px solid red;
+            width: 100%;
+            max-width: 250px;
+            padding: 10px;
+            border-radius: 12px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .terms-container p {
+            line-height: 1;
+            font-size: 12px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <select>
+        <option value="ko">한국어</option>
+        <option value="en">Enlisgh</option>
+        <option value="jp">일본어</option>
+    </select>
+
+    <select>
+        <option>1920</option>
+        <option>1921</option>
+        <option>1923</option>
+        <option>1970</option>
+        <option selected value="1971">1971</option>
+        <option>1972</option>
+        <option>2010</option>
+        <option>2011</option>
+        <option>2012</option>
+    </select>
+
+    <select name="">
+        <optgroup label="서울시">
+            <option>구로구</option>
+            <option>강서구</option>
+        </optgroup>
+        <optgroup label="부산시">
+            <option>사하구</option>
+        </optgroup>
+        <optgroup label="제주도">
+            <option>제주시</option>
+            <option>서귀포시</option>
+        </optgroup>
+    </select>
+
+    <hr>
+    <textarea readonly disabled>
+        공백병합현상이 일어나지 않는다.
+        다양한 네이버 서비스를 즐겨보세요.
+        네이버는 
+        <a href="https://www.naver.com" target="_blank">
+            www.naver.com
+        </a>
+    </textarea>
+    <div class="terms-container">
+        <h3>다양한 네이버 서비스를 즐겨보세요.</h3>
+        <p>네이버는
+            <a href="https://www.naver.com" target="_blank">
+                www.naver.com
+            </a>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero vel nam nobis corrupti accusamus similique
+            debitis aliquam minus aperiam quae totam nulla, saepe veritatis rem asperiores beatae cumque atque incidunt.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero vel nam nobis corrupti accusamus similique
+            debitis aliquam minus aperiam quae totam nulla, saepe veritatis rem asperiores beatae cumque atque incidunt.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero vel nam nobis corrupti accusamus similique
+            debitis aliquam minus aperiam quae totam nulla, saepe veritatis rem asperiores beatae cumque atque incidunt.
+        </p>
+    </div>
+    <hr>
+    <div class="phone-check">
+        <input type="tel" required placeholder="'-'없이 숫자만 입력해주세요">
+        <button type="button" disabled>인증요청</button>
+        <hr>
+        <input type="text" disabled placeholder="인증번호 6자리">
+    </div>
+
+    <hr>
+    <label for="disk_c">Disk usage C:</label>
+    <meter id="disk_c" value="5" min="0" max="10">2 out of 10</meter><br>
+
+    <label for="disk_d">Disk usage D:</label>
+    <meter id="disk_d" value="0.6">60%</meter>
+
+</body>
+
+</html>

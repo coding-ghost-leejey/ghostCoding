@@ -174,13 +174,81 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.page-main {
+  width: 100%;
+  max-width: 1200px;
+}
 /* 지금뜨는 컨텐츠 */
 .page-main .contents {
   margin: 2rem 0;
 }
-.now-container h3 {
-  font-weight: 600;
-  font-size: 20px;
+
+.page-main .contents h3 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.now-container ol {
+  display: flex;
+  gap: 22px;
+  overflow: auto;
+}
+
+.now-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.now-container .pager-container {
+  display: flex;
+  gap: 20px;
+}
+
+.now-container .pager-container button.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.now-container li {
+  width: 200px;
+  height: 252px;
+  flex-shrink: 0;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.now-container li a {
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  display: block;
+  height: 100%;
+}
+
+.now-container li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.now-container .num {
+  position: absolute;
+  font-size: 100px;
+  color: #000;
+  -webkit-text-fill-color: #000;
+  -webkit-text-stroke: 4px #fff;
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  inset: auto auto 0 0;
+  font-weight: 900;
+}
+
+.now-container .num::before {
+  content: attr(data-rank);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  position: absolute;
+  inset: 0 auto auto 0;
 }
 
 .reason-container ul {
