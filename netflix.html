@@ -7,13 +7,7 @@
     <title>Netflix</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/netflix.css">
-    <style>
-        details[open] {
-            color: red;
-        }
 
-        details[open] summary {}
-    </style>
 </head>
 
 <body>
@@ -183,6 +177,8 @@
             </ul>
         </article>
 
+
+
         <article class="contents faq-container">
             <h3>자주묻는 질문</h3>
             <ul class="list">
@@ -218,36 +214,7 @@
 
 
 
-    <script>
-        const nowContainer = document.querySelector('.now-container');
-        const list = nowContainer.querySelector('ol')
-        const goStart = nowContainer.querySelector('.start')
-        const goEnd = nowContainer.querySelector('.end')
 
-        goStart.addEventListener('click', () => {
-            list.scrollTo({
-                left: 0,
-            })
-        })
-
-        goEnd.addEventListener('click', () => {
-            list.scrollTo({
-                left: list.scrollWidth - list.clientWidth
-            })
-        })
-
-        updateButtonStates();
-
-        list.addEventListener('scroll', updateButtonStates)
-
-        function updateButtonStates() {
-            const isAtStart = list.scrollLeft === 0;
-            const isAtEnd = list.scrollLeft >= (list.scrollWidth - list.clientWidth - 1)
-
-            isAtStart ? goStart.classList.add('disabled') : goStart.classList.remove('disabled')
-            isAtEnd ? goEnd.classList.add('disabled') : goEnd.classList.remove('disabled')
-        }
-    </script>
 
 </body>
 
