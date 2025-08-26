@@ -14,5 +14,57 @@ body {
   background-position: center center;
   background-size: cover; */
   /* 축약형 */
+  color: #fff;
+  font-family: sans-serif;
   background: url("../images/full_bg.jpg") no-repeat fixed center center/cover;
+}
+
+a,
+button {
+  transition: 0.4s;
+}
+.gnb .list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  font-size: 12px;
+}
+
+.gnb a:hover {
+  text-decoration: underline;
+}
+
+.gnb .btn_lab,
+.gnb .btn_menu,
+.gnb .btn_mypage {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: no-repeat center center/24px auto;
+}
+
+.gnb .btn_lab {
+  background-image: url("../images/icons/lab_wt.svg");
+  background-size: 20px auto;
+}
+
+.gnb .btn_menu {
+  background-image: url("../images/icons/vento_wt.svg");
+}
+
+.gnb .btn_mypage {
+  background-color: #fff;
+  background-image: url("../images/irangi_7.png");
+}
+
+.gnb .btn_lab:hover,
+.gnb .btn_menu:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.gnb .btn_mypage:hover {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
