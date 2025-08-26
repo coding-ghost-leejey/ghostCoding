@@ -69,11 +69,60 @@ button {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
+.main-container {
+  width: 100%;
+  max-width: 746px;
+  margin: 3rem auto 0;
+}
+
+.main-container h1 {
+  font-size: 100px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 검색 */
+.search-container {
+  border-radius: 30px;
+  background: #fff url("../images/icons/search_gr.svg") no-repeat 8px
+    center/24px auto;
+  padding: 0 20px 0 36px;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 3rem;
+}
+.search-container form {
+  flex-grow: 1; /* figma의 fill-container와 동일 */
+}
+.search-container .input {
+  width: 100%;
+  height: 48px;
+  color: #000;
+  outline: 1px solid transparent;
+}
+.search-container .other-search {
+  display: flex;
+  gap: 10px;
+}
+.search-container .other-search button {
+  width: 24px;
+  height: 24px;
+  background: no-repeat center center/21px auto;
+}
+
+.search-container .other-search .voice {
+  background-image: url("../images/icons/google_voice.svg");
+}
+.search-container .other-search .lens {
+  background-image: url("../images/icons/google_lens.svg");
+}
+
+/* 자주방문하는 사이트 */
 .latest-site-list {
 }
 
 .latest-site-list li {
-  width: 160px;
+  width: 112px;
   position: relative;
 }
 
@@ -81,26 +130,30 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 112px;
   gap: 0.8rem;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1rem;
+  font-size: 13px;
+  text-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .latest-site-list .favicon {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background-color: #e8e8e8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .latest-site-list .btn_more {
-  width: 28px;
-  height: 28px;
-  background: rgba(255, 255, 255, 0.3) url("../images/icons/meatball_wt.svg")
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.3) url("../images/icons/meatball_wt.svg")
     no-repeat center center/20px auto;
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 2px;
+  top: 4px;
   border-radius: 50%;
 }
