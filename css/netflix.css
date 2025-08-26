@@ -113,7 +113,7 @@ body {
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .banner-discount {
@@ -263,4 +263,54 @@ body {
   outline: 1px solid gold;
   background: url("../images/icons/sns_facebook.png") no-repeat right 10px
     bottom 15px/40px auto;
+  font-size: 1.15rem;
+}
+
+.faq-container li {
+  margin-bottom: 8px;
+}
+.faq-container details {
+  font-size: 1.15rem;
+}
+
+.faq-container summary {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-l);
+  padding: 1.5rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  transition: 0.4s;
+}
+
+.faq-container summary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.faq-container summary::after {
+  content: "";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%; /* calc(50% - 12px); 이렇게 할경우 아래 translate은 필요없다.  */
+  translate: 0 -50%;
+  width: 24px;
+  height: 24px;
+  background: url("../images/icons/plus-solid-full-wt.svg") no-repeat center
+    center/contain;
+  transition: 0.4s; /* + 아이콘이 회전하는 것을 보여주기 위한 전이효과 */
+}
+
+.faq-container details[open] summary {
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
+}
+
+.faq-container details[open] summary::after {
+  rotate: -45deg;
+}
+
+.faq-container .answer {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0 0 var(--radius-m) var(--radius-m);
+  padding: 1.5rem;
+  margin-top: 8px;
+  line-height: 1.5;
 }

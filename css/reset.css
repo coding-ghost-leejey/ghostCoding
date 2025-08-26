@@ -62,7 +62,8 @@ h6 {
 }
 
 ul,
-ol {
+ol,
+summary {
   list-style: none;
 }
 

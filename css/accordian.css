@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+:root {
+  --bg: #00000010;
+  --line: #00000015;
+}
+
+.list {
+  margin: 20px;
+}
+
+.list li {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.list li:hover {
+  color: darkolivegreen;
+}
+
+.list details {
+  padding: 10px;
+}
+
+.list details[open] {
+  background-color: var(--bg);
+  color: tomato;
+}
+
+summary {
+  list-style: none;
+  position: relative;
+}
+
+details::details-content {
+  color: red;
+  block-size: 0;
+  transition: 0.4s;
+}
+
+details[open]::details-content {
+  block-size: auto;
+  block-size: calc-size(auto);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+  /* for safari browser */
+}
+
+details summary::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: url("./marker_down.svg") no-repeat center center/contain;
+}
+
+details[open] summary::after {
+  background-image: url("./marker_up.svg");
+}
