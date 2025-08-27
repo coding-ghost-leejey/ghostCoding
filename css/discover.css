@@ -32,10 +32,26 @@ a {
   z-index: -1;
 }
 
-.video-container img {
-  width: 100%;
+.video-container video {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  translate: -50% 0;
   height: 100%;
+  width: 100%;
+  min-height: 100vh;
   object-fit: cover;
+  object-position: center top;
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .page-header {
